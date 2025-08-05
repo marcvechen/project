@@ -11,11 +11,26 @@ const quote = document.getElementById("quote");
 const copyBtn = document.getElementById("copy");
 const favoriteBtn = document.getElementById("favoriteBtn");
 const favoriteList = document.getElementById("favoriteList");
-const rndQuote = () => {
-  const randonIndex = Math.floor(Math.random() * quotes.length);
-  const randomQuote = quotes[randonIndex];
-  quote.innerText = randomQuote;
-};
+// const rndQuote = () => {
+//   const randonIndex = Math.floor(Math.random() * quotes.length);
+//   const randomQuote = quotes[randonIndex];
+//   quote.innerText = randomQuote;
+// };
+rndQuote();
+async function rndQuote() {
+  fetch("https://api.api-ninjas.com/v1/quotes", {
+    method: "GET",
+    headers: { "X-Api-Key": "A5WXKifXupMEJ6xGwymAYA==l704hvnDyhOXuEdD" },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      const randomQuote = data[0].quote;
+      quote.innerText = randomQuote;
+    });
+}
+
 rndQuote();
 rndBtn.addEventListener("click", function () {
   rndQuote();
