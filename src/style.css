@@ -1,0 +1,176 @@
+body {
+  background-color: rgb(29, 29, 29);
+}
+.container {
+  padding: 30px;
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+}
+@media (max-width: 1280px) {
+  .container {
+    padding: 15px;
+    max-width: 900px;
+    text-align: center;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.text-primary {
+  padding: 30px;
+  color: rgb(255, 255, 255) !important;
+}
+@media (max-width: 1280px) {
+  .text-primary {
+    padding: 15px;
+    font-size: 27px;
+  }
+}
+@media (max-width: 768) {
+  .text-primary {
+    padding: 10px;
+  }
+}
+.text-secondary {
+  color: rgb(228, 228, 228) !important;
+}
+@media (max-width: 1280px) {
+  .text-secondary {
+    font-size: 14px;
+  }
+}
+
+.text-container {
+  padding: 10px;
+  max-height: 1200;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(44, 44, 44);
+  border-radius: 10px;
+}
+@media (max-width: 1280px) {
+  .text-container {
+    padding: 15px;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+  }
+  @media (max-width: 768px) {
+    .text-container {
+      padding: 10px;
+      max-width: 500px;
+      text-align: center;
+      margin: auto;
+    }
+  }
+}
+.text-warning {
+  padding: 10px;
+  margin: auto;
+  max-width: 800px;
+  height: 60px;
+}
+@media (max-width: 1280px) {
+  .text-warning {
+    padding: 0px;
+    max-width: 800px;
+    height: 50px;
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    .text-warning {
+      padding: 0px;
+      max-width: 600px;
+      height: 40px;
+      font-size: 12px;
+    }
+  }
+}
+.btn-container {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1280px) {
+  .btn-container {
+    padding: 10px;
+  }
+}
+@media (max-width: 768) {
+  .btn-container {
+    padding: 10px;
+  }
+}
+.btn-primary {
+  margin: 15px;
+}
+@media (max-width: 1280px) {
+  .btn-primary {
+    margin: 10px;
+  }
+}
+@media (max-width: 768) {
+  .btn-primary {
+    margin: 5px;
+  }
+}
+.btn-light {
+  margin: 15px;
+}
+@media (max-width: 1280px) {
+  .btn-light {
+    margin: 10px;
+  }
+}
+@media (max-width: 768) {
+  .btn-light {
+    margin: 5px;
+  }
+}
+.favoriteBtn {
+  color: white;
+  background-color: rgba(28, 28, 28, 0);
+}
+.favoriteList {
+  background-color: rgb(44, 44, 44);
+  padding: 10px;
+
+  height: auto;
+  overflow: hidden;
+
+  justify-content: center;
+  background-color: rgb(44, 44, 44);
+  border-radius: 10px;
+}
+.favoriteQuote {
+  padding: 10px;
+  margin: auto;
+  max-width: 800px;
+  height: 60px;
+}
+@media (max-width: 1280px) {
+  .favoriteQuote {
+    padding: 0px;
+    max-width: 800px;
+    height: 50px;
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    .favoriteQuote {
+      padding: 0px;
+      max-width: 600px;
+      height: 40px;
+      font-size: 12px;
+    }
+  }
+}
