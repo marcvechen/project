@@ -58,7 +58,8 @@ saveFavorites();
 function loadFavorites() {
   const favoriteStorage = localStorage.getItem("favorites");
   const adsd = JSON.parse(favoriteStorage);
-  return favoriteArray.push(adsd);
+  favoriteArray.splice(0, favoriteArray.length);
+  favoriteArray.push(adsd);
 }
 loadFavorites();
 renderFavorites();
