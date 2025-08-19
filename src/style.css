@@ -1,5 +1,17 @@
-body {
-  background-color: rgb(29, 29, 29);
+:root {
+  --background-color: white;
+
+  --text-primary: rgb(29, 29, 29);
+  --text-secondary: rgb(29, 29, 29);
+}
+
+.dark-mode {
+  transition: background-color 0.3s, color 0.3s;
+
+  --background-color: rgb(29, 29, 29);
+
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgb(255, 255, 255);
 }
 .container {
   padding: 30px;
@@ -26,7 +38,7 @@ body {
 
 .text-primary {
   padding: 30px;
-  color: rgb(255, 255, 255) !important;
+  color: var(--text--primary) !important;
 }
 @media (max-width: 1280px) {
   .text-primary {
@@ -40,7 +52,7 @@ body {
   }
 }
 .text-secondary {
-  color: rgb(228, 228, 228) !important;
+  color: var(--text--secondary) !important;
 }
 @media (max-width: 1280px) {
   .text-secondary {
