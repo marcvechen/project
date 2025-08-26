@@ -16,6 +16,8 @@ const favoriteList = document.getElementById("favoriteList");
 
 rndQuote();
 loadFavorites();
+renderFavorites();
+
 //func of copy quotes
 rndBtn.addEventListener("click", function () {
   rndQuote();
@@ -53,3 +55,4 @@ favoriteBtn.addEventListener("click", function () {
   removeFavQuote();
   renderFavorites();
 });
+export default renderFavorites;

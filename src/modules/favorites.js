@@ -6,14 +6,11 @@ const removeFavQuote = () => {
     favoriteArray.push(quote.innerText);
   }
 };
-favoriteBtn.addEventListener("click", function () {
-  removeFavQuote();
-  renderFavorites();
-});
 
 function loadFavorites() {
   const favoriteStorage = localStorage.getItem("favorites");
-  const storedFavorites = JSON.parse(favoriteStorage);
+  const storedFavorites = JSON.parse(favoriteStorage || "[]");
+
   favoriteArray.push(...storedFavorites);
 }
 function saveFavorites() {
