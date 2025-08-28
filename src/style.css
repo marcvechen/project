@@ -1,17 +1,16 @@
 :root {
-  --background-color: white;
-
-  --text-primary: rgb(29, 29, 29);
+  --text-container: rgb(44, 44, 44);
+  --main-text: rgb(29, 29, 29);
   --text-secondary: rgb(29, 29, 29);
 }
 
 .dark-mode {
   transition: background-color 0.3s, color 0.3s;
+  background-color: rgb(29, 29, 29);
+  --text-container: rgb(255, 255, 255);
 
-  --background-color: rgb(29, 29, 29);
-
-  --text-primary: rgb(255, 255, 255);
-  --text-secondary: rgb(255, 255, 255);
+  --main-text: rgb(255, 255, 255);
+  --secondary-text: rgb(255, 255, 255);
 }
 .container {
   padding: 30px;
@@ -36,26 +35,26 @@
   }
 }
 
-.text-primary {
+.main-text {
   padding: 30px;
-  color: var(--text--primary) !important;
+  color: var(--main-text);
 }
 @media (max-width: 1280px) {
-  .text-primary {
+  .main-text {
     padding: 15px;
     font-size: 27px;
   }
 }
 @media (max-width: 768) {
-  .text-primary {
+  .main-text {
     padding: 10px;
   }
 }
-.text-secondary {
-  color: var(--text--secondary) !important;
+.secondary-text {
+  color: var(--secondary-text) !important;
 }
 @media (max-width: 1280px) {
-  .text-secondary {
+  .secondary-text {
     font-size: 14px;
   }
 }
@@ -67,7 +66,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  background-color: rgb(44, 44, 44);
+  background-color: var(--text-container);
   height: 100px;
 
   border-radius: 10px;

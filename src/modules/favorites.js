@@ -10,7 +10,6 @@ const removeFavQuote = () => {
 function loadFavorites() {
   const favoriteStorage = localStorage.getItem("favorites");
   const storedFavorites = JSON.parse(favoriteStorage || "[]");
-
   favoriteArray.push(...storedFavorites);
 }
 function saveFavorites() {
