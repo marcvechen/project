@@ -7,12 +7,14 @@ import {
   loadFavorites,
   saveFavorites,
 } from "./modules/favorites.js";
+import { toggleDarkMode } from "./modules/themes.js";
 
 const rndBtn = document.getElementById("rndBtn");
 const quote = document.getElementById("quote");
 const copyBtn = document.getElementById("copy");
 const favoriteBtn = document.getElementById("favoriteBtn");
 const favoriteList = document.getElementById("favoriteList");
+const divThemesIcon = document.querySelector(".divThemesIcon");
 
 rndQuote();
 loadFavorites();
@@ -56,3 +58,5 @@ favoriteBtn.addEventListener("click", function () {
   renderFavorites();
 });
 export default renderFavorites;
+// Toggle dark mode
+divThemesIcon.addEventListener("click", toggleDarkMode);
