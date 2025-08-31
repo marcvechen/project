@@ -8,13 +8,17 @@ import {
   saveFavorites,
 } from "./modules/favorites.js";
 import { toggleDarkMode } from "./modules/themes.js";
+import shareApi from "./share.js";
+import downloadFunc from "./modules/download.js";
 
-const rndBtn = document.getElementById("rndBtn");
-const quote = document.getElementById("quote");
-const copyBtn = document.getElementById("copy");
-const favoriteBtn = document.getElementById("favoriteBtn");
-const favoriteList = document.getElementById("favoriteList");
-const divThemesIcon = document.querySelector(".divThemesIcon");
+const rndBtn = document.getElementById("rndBtn"),
+  quote = document.getElementById("quote"),
+  copyBtn = document.getElementById("copyBtn"),
+  favoriteBtn = document.getElementById("favoriteBtn"),
+  favoriteList = document.getElementById("favoriteList"),
+  divThemesIcon = document.querySelector(".divThemesIcon"),
+  shareBtn = document.getElementById("shareBtn"),
+  downloadBtn = document.getElementById("downloadBtn");
 
 rndQuote();
 loadFavorites();
@@ -60,3 +64,15 @@ favoriteBtn.addEventListener("click", function () {
 export default renderFavorites;
 // Toggle dark mode
 divThemesIcon.addEventListener("click", toggleDarkMode);
+//Share btn
+shareBtn.addEventListener("click", shareApi);
+//Download btn
+
+downloadBtn.addEventListener("click", function () {
+  const url = downloadFunc();
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "favorites.txt";
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
