@@ -3,7 +3,7 @@ const favoriteArray = [];
 const removeFavQuote = () => {
   const index = favoriteArray.indexOf(quote.innerText);
   if (index === -1) {
-    favoriteArray.push(quote.innerText);
+    favoriteArray.push(`${quote.innerText}\n\n"${author.innerText}"`);
   }
 };
 
